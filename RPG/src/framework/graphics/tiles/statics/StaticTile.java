@@ -7,7 +7,7 @@ import javafx.scene.canvas.GraphicsContext;
 
 public class StaticTile extends Tile {
 
-	private Game game;
+    private Game game;
     private Sprite sprite;
 
     public StaticTile(Game game, Sprite sprite, int id, int x, int y, boolean walkable) {
@@ -19,8 +19,8 @@ public class StaticTile extends Tile {
     @Override
     public void render(GraphicsContext gc) {
         gc.drawImage(
-        		sprite.getScaledImage((int) game.getGameState().getMouseHandler().getScale()),
-        		(getX() * SIZE - game.getCamera().getOffset().getX()),
+        	sprite.getScaledImage((int) game.getGameState().getMouseHandler().getScale()),
+        	(getX() * SIZE - game.getCamera().getOffset().getX()),
                 (getY() * SIZE - game.getCamera().getOffset().getY()),
                 SIZE, SIZE
         );
