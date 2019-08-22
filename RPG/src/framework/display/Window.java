@@ -29,7 +29,8 @@ public final class Window extends Stage {
 			widthProperty().addListener((obs, oldVal, newVal) -> {
 				if (state instanceof GameState) {
 					// Update the size of the rendering area
-					game.getGameState().getStackedRenderer().getRenderers().forEach(renderer -> renderer.updateWidth());
+					game.getGameState().getStackedRenderer().getRenderers()
+						.forEach(renderer -> renderer.updateWidth());
 				}
 			});
 			// If the window is resized in the Y direction
