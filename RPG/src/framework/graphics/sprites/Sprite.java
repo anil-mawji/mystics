@@ -8,7 +8,7 @@ import javafx.scene.image.WritableImage;
 
 public final class Sprite {
 
-	private final Image[] resamples = new Image[MouseHandler.getMaxScale()];
+    private final Image[] resamples = new Image[MouseHandler.getMaxScale()];
 	
     private Image image;
 
