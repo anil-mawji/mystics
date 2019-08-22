@@ -28,25 +28,26 @@ public class EntityHandler {
                     && entity.getPosition().getY() < game.getWindow().getHeight() + game.getCamera().getOffset().getY()) {
                 entity.setVisible(true);
             }
-    		entity.tick();
-    		// If the entity is dead remove it from the game
-			if(!entity.isActive()) {
-				entities.remove(entity);
-			}
+    	    entity.tick();
+		
+    	    // If the entity is dead remove it from the game
+	    if (!entity.isActive()) {
+	    	entities.remove(entity);
+	    }
     	}
     }
     
     public void render(GraphicsContext gc) {
     	// Z-indexing: sort the entities based upon their Y values
-	    entities.sort((Entity a, Entity b) ->
-	    	a.getPosition().getY() + a.getHeight() < b.getPosition().getY() + b.getHeight() ? -1 : 0
-	    );
-	    // Render all the entities if they are visible
+	entities.sort((Entity a, Entity b) ->
+		a.getPosition().getY() + a.getHeight() < b.getPosition().getY() + b.getHeight() ? -1 : 0
+	);
+	// Render all the entities if they are visible
         entities.forEach(entity -> {
         	if (entity.isVisible()) {
-                entity.render(gc);
-                // Disable entity visibility to prepare for a new iteration
-                entity.setVisible(false);
+                	entity.render(gc);
+               		// Disable entity visibility to prepare for a new iteration
+                	entity.setVisible(false);
         	}
         });
     }
