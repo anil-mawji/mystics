@@ -28,10 +28,10 @@ public class Light {
 
 	public void render(GraphicsContext gc) {
 		gc.drawImage(
-				sprite.getImage(),
-				x - game.getCamera().getOffset().getX(),
-				y - game.getCamera().getOffset().getY(),
-				width, height
+			sprite.getImage(),
+			x - game.getCamera().getOffset().getX(),
+			y - game.getCamera().getOffset().getY(),
+			width, height
 		);
 	}
 }
