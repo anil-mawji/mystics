@@ -7,7 +7,7 @@ import javafx.scene.canvas.GraphicsContext;
 
 public class AnimatedTile extends Tile {
 
-	private Game game;
+    private Game game;
     private Animation animation;
     
     public AnimatedTile(Game game, Animation animation, int id, int x, int y, boolean walkable) {
@@ -23,10 +23,10 @@ public class AnimatedTile extends Tile {
     @Override
     public void render(GraphicsContext gc) {
         gc.drawImage(
-        		animation.getCurrentFrame().getScaledImage((int) game.getGameState().getMouseHandler().getScale()),
-        		getX() * SIZE - game.getCamera().getOffset().getX(),
+        	animation.getCurrentFrame().getScaledImage((int) game.getGameState().getMouseHandler().getScale()),
+        	getX() * SIZE - game.getCamera().getOffset().getX(),
                 getY() * SIZE - game.getCamera().getOffset().getY(),
-        		SIZE, SIZE
+        	SIZE, SIZE
         );
     }
 }
