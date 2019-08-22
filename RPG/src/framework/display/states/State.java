@@ -17,6 +17,7 @@ public class State {
 
 	/**
 	 * Adds a node to the root node
+	 *
 	 * @param node
 	 */
 	public void addToRoot(Node node) {
@@ -24,7 +25,8 @@ public class State {
 	}
 
 	/**
-	 * Adds given nodes to the root node
+	 * Adds the given nodes to the root node
+	 *
 	 * @param nodes
 	 */
 	public void addAllToRoot(Node... nodes) {
