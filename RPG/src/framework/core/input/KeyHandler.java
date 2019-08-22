@@ -20,10 +20,8 @@ public final class KeyHandler {
 				keys.add(key);
 			}
 		});
-		scene.setOnKeyReleased(event -> {
-			// Remove the key from the list
-			keys.remove(event.getCode().toString());
-		});
+		// Remove the key from the list
+		scene.setOnKeyReleased(event -> keys.remove(event.getCode().toString()));
 	}
 	
 	public boolean isKeyHeld(String key) {
