@@ -29,18 +29,18 @@ public class StaticEntity extends Entity {
 	public void render(GraphicsContext gc) {
 		// Render the entity
 		gc.drawImage(
-				sprite.getScaledImage((int) game.getGameState().getMouseHandler().getScale()),
-				position.getX() - game.getCamera().getOffset().getX(),
-				position.getY() - game.getCamera().getOffset().getY(), width, height
+			sprite.getScaledImage((int) game.getGameState().getMouseHandler().getScale()),
+			position.getX() - game.getCamera().getOffset().getX(),
+			position.getY() - game.getCamera().getOffset().getY(), width, height
 		);
 		
 		// Render collision bounds
 		if (game.getGameState().isDebuggingEnabled()) {
 			gc.setStroke(Color.RED);
 			gc.strokeRect(
-					position.getX() + bounds.getX() - game.getCamera().getOffset().getX(),
-					position.getY() + bounds.getY() - game.getCamera().getOffset().getY(), bounds.getWidth(),
-					bounds.getHeight()
+				position.getX() + bounds.getX() - game.getCamera().getOffset().getX(),
+				position.getY() + bounds.getY() - game.getCamera().getOffset().getY(), bounds.getWidth(),
+				bounds.getHeight()
 			);
 		}
 	}
