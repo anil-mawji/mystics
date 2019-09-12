@@ -104,7 +104,7 @@ public class AStar {
 		}
         	Tile Tile = tileMap.getTiles()[ix][iy];
 		if (Tile != null && Tile.isWalkable() && !closedList.contains(Tile)) {
-				successors.add(Tile);
+			successors.add(Tile);
 		}
 	}
 }
