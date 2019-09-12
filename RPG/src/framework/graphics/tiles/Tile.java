@@ -32,9 +32,9 @@ public class Tile implements Comparable<Tile> {
 
 	public void render(GraphicsContext gc) {
 		gc.fillRect(
-				x * SIZE - game.getCamera().getOffset().getX(),
-				y * SIZE - game.getCamera().getOffset().getY(),
-				SIZE, SIZE
+			x * SIZE - game.getCamera().getOffset().getX(),
+			y * SIZE - game.getCamera().getOffset().getY(),
+			SIZE, SIZE
 		);
 	}
 
