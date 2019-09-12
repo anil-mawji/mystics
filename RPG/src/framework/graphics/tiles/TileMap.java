@@ -15,7 +15,7 @@ import framework.graphics.tiles.statics.StoneTile;
 public final class TileMap {
 
 	public static final String[][] MAP_1 = TileMapReader
-			.loadTextFileAsMap("C:/Users/mawji/eclipse-workspace/Mystics/src/res/worlds/world1.txt");
+		.loadTextFileAsMap("C:/Users/mawji/eclipse-workspace/Mystics/src/res/worlds/world1.txt");
 
 	private static Tile VOID;
 
@@ -73,9 +73,9 @@ public final class TileMap {
 						// Render tile outlines
 						gc.setStroke(Color.BLACK);
 						gc.strokeRect(
-								x * Tile.SIZE - game.getCamera().getOffset().getX(),
-								y * Tile.SIZE - game.getCamera().getOffset().getY(),
-								Tile.SIZE, Tile.SIZE
+							x * Tile.SIZE - game.getCamera().getOffset().getX(),
+							y * Tile.SIZE - game.getCamera().getOffset().getY(),
+							Tile.SIZE, Tile.SIZE
 						);
 						// Render A* paths
 						for (Entity entity : game.getEntityHandler().getEntities()) {
@@ -84,9 +84,9 @@ public final class TileMap {
 									&& ((Enemy) entity).getAttackPath().contains(getTile(x, y))) {
 								gc.setFill(Color.YELLOW);
 								gc.fillRect(
-										x * Tile.SIZE - game.getCamera().getOffset().getX(),
-										y * Tile.SIZE - game.getCamera().getOffset().getY(),
-										Tile.SIZE, Tile.SIZE
+									x * Tile.SIZE - game.getCamera().getOffset().getX(),
+									y * Tile.SIZE - game.getCamera().getOffset().getY(),
+									Tile.SIZE, Tile.SIZE
 								);
 							}
 						}
@@ -136,16 +136,14 @@ public final class TileMap {
 	 * Get right side of screen
 	 */
 	public int getEndX() {
-		return (int) Math.min(width,
-				(game.getCamera().getOffset().getX() + game.getWindow().getWidth()) / Tile.SIZE + 1);
+		return (int) Math.min(width, (game.getCamera().getOffset().getX() + game.getWindow().getWidth()) / Tile.SIZE + 1);
 	}
 
 	/*
 	 * Get bottom of screen
 	 */
 	public int getEndY() {
-		return (int) Math.min(height,
-				(game.getCamera().getOffset().getY() + game.getWindow().getHeight()) / Tile.SIZE + 1);
+		return (int) Math.min(height, (game.getCamera().getOffset().getY() + game.getWindow().getHeight()) / Tile.SIZE + 1);
 	}
 
 	public boolean positionExistsOnMap(int ix, int iy) {
