@@ -20,9 +20,9 @@ public class StaticTile extends Tile {
     public void render(GraphicsContext gc) {
         gc.drawImage(
         	sprite.getScaledImage((int) game.getGameState().getMouseHandler().getScale()),
-        	(getX() * SIZE - game.getCamera().getOffset().getX()),
-                (getY() * SIZE - game.getCamera().getOffset().getY()),
-                SIZE, SIZE
+        	getX() * SIZE - game.getCamera().getOffset().getX(),
+            getY() * SIZE - game.getCamera().getOffset().getY(),
+            SIZE, SIZE
         );
     }
 }
