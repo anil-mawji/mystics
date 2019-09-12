@@ -99,12 +99,12 @@ public class AStar {
 	 * @param closedList
 	 */
 	private static void addSuccessor(TileMap tileMap, int ix, int iy, List<Tile> successors, List<Tile> closedList) {
-        if (!tileMap.positionExistsOnMap(ix, iy)) {
-            return;
-        }
-        Tile Tile = tileMap.getTiles()[ix][iy];
-        if (Tile != null && Tile.isWalkable() && !closedList.contains(Tile)) {
-			successors.add(Tile);
-        }
+		if (!tileMap.positionExistsOnMap(ix, iy)) {
+		    return;
+		}
+        	Tile Tile = tileMap.getTiles()[ix][iy];
+		if (Tile != null && Tile.isWalkable() && !closedList.contains(Tile)) {
+				successors.add(Tile);
+		}
 	}
 }
