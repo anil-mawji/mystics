@@ -21,8 +21,8 @@ public class StaticTile extends Tile {
         gc.drawImage(
         	sprite.getScaledImage((int) game.getGameState().getMouseHandler().getScale()),
         	getX() * SIZE - game.getCamera().getOffset().getX(),
-            getY() * SIZE - game.getCamera().getOffset().getY(),
-            SIZE, SIZE
+                getY() * SIZE - game.getCamera().getOffset().getY(),
+                SIZE, SIZE
         );
     }
 }
