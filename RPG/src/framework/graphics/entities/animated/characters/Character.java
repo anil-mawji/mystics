@@ -77,7 +77,7 @@ public class Character extends AnimatedEntity {
 	protected void animate() {
 		super.animate();
 		// If character is not moving or dying stop playing the current animation
-		if (velocity.isEmpty() && !(getAnimation() == deathAnimation)) {
+		if (velocity.isEmpty() && getAnimation() != deathAnimation) {
 			getAnimation().setPlaying(false);
 		}
 	}
