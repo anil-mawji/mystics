@@ -22,7 +22,7 @@ public class AStar {
 		// Open list holds tiles that are being checked
 		Queue<Tile> openList = new PriorityQueue<>();
 		// Closed list holds tiles that not part of the path
-		List<Tile> closedList = new LinkedList<Tile>();
+		List<Tile> closedList = new LinkedList<>();
 		
 		// Add the start tile to the open list
 		openList.add(tileMap.getTiles()[startX][startY]);
@@ -75,7 +75,7 @@ public class AStar {
 	 * @return ordered path of tiles from closest to the furthest
 	 */
 	private static List<Tile> getPath(Tile start, Tile goal) {
-		LinkedList<Tile> path = new LinkedList<Tile>();
+		LinkedList<Tile> path = new LinkedList<>();
 		Tile Tile = goal;
 		boolean finished = false;
 		
