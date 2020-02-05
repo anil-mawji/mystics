@@ -18,21 +18,21 @@ public class LightMap {
 	}
 
 	public void render(GraphicsContext gc) {
-        gc.setFill(Color.BLACK);
-        gc.setGlobalAlpha(1);
-        // Prepare to render lights by cutting holes in the black layer
-        gc.setGlobalBlendMode(BlendMode.MULTIPLY);
-        // Draw a black screen
-        gc.fillRect(
-                -game.getCamera().getOffset().getX(),
-                -game.getCamera().getOffset().getY(),
-                game.getTileMap().getWidthInPixels(),
-                game.getTileMap().getHeightInPixels()
-        );
-        // If lights are placed on top of one another, the combined alpha values with be added
-        gc.setGlobalBlendMode(BlendMode.ADD);
-        // Render all lights in the map
-        lights.forEach(light -> light.render(gc));
+		gc.setFill(Color.BLACK);
+		gc.setGlobalAlpha(1);
+		// Prepare to render lights by cutting holes in the black layer
+		gc.setGlobalBlendMode(BlendMode.MULTIPLY);
+		// Draw a black screen
+		gc.fillRect(
+			-game.getCamera().getOffset().getX(),
+			-game.getCamera().getOffset().getY(),
+			game.getTileMap().getWidthInPixels(),
+			game.getTileMap().getHeightInPixels()
+		);
+		// If lights are placed on top of one another, the combined alpha values with be added
+		gc.setGlobalBlendMode(BlendMode.ADD);
+		// Render all lights in the map
+		lights.forEach(light -> light.render(gc));
 	}
 	
 	/**
